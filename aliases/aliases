@@ -18,7 +18,8 @@ alias g='git'
 alias e='$EDITOR'
 
 
-
+# test if sync works
+alias test-config='echo "config sync worked v0.0.1"'
 
 # gen-kube command
 # alias gen-kube-thing="egrep "^\[profile.*sigint|^role_arn.*sigint" ~/.aws/config | /usr/bin/grep -B1 ^role_arn"

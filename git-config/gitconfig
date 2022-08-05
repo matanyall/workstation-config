@@ -1,0 +1,33 @@
+[url "ssh://git@github.com/sendgrid"]
+	insteadOf = https://github.com/sendgrid
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Matanya Loewenthal
+	email = matanya@loewenthal.net
+[includeIf "gitdir:~/ghq/gitlab.com/"]
+    path = ~/.gitconfigs/personal/.gitconfig
+[core]
+	editor = micro
+[alias]
+	chk = checkout
+	br = branch
+	cm = commit
+	st = status
+	sts = status
+	psh = push
+	pl = pull
+	pshuo = push --set-upstream origin
+	pshou = push --set-upstream origin
+	mrg = merge --no-ff
+	a = add
+	pshu = push --set-upstream origin
+[ghq "https://github.com/"]
+vcs = git
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
